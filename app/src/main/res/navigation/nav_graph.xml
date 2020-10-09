@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashfrag">
+
+    <fragment
+        android:id="@+id/splashfrag"
+        android:name="com.example.quizapplicationv1.splashfrag"
+        android:label="fragment_splashfrag"
+        tools:layout="@layout/fragment_splashfrag" >
+        <action
+            android:id="@+id/action_splashfrag_to_menufrag"
+            app:destination="@id/menufrag"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashfrag"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/menufrag"
+        android:name="com.example.quizapplicationv1.menufrag"
+        android:label="fragment_menufrag"
+        tools:layout="@layout/fragment_menufrag" >
+        <action
+            android:id="@+id/action_menufrag_to_detailfrag"
+            app:destination="@id/detailfrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailfrag"
+        android:name="com.example.quizapplicationv1.detailfrag"
+        android:label="fragment_detailfrag"
+        tools:layout="@layout/fragment_detailfrag" >
+        <action
+            android:id="@+id/action_detailfrag_to_quizfrag"
+            app:destination="@id/quizfrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizfrag"
+        android:name="com.example.quizapplicationv1.quizfrag"
+        android:label="fragment_quizfrag"
+        tools:layout="@layout/fragment_quizfrag" >
+        <action
+            android:id="@+id/action_quizfrag_to_scorefrag"
+            app:destination="@id/scorefrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/scorefrag"
+        android:name="com.example.quizapplicationv1.scorefrag"
+        android:label="fragment_scorefrag"
+        tools:layout="@layout/fragment_scorefrag" />
+
+</navigation>
